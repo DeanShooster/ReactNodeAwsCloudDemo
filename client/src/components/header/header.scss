@@ -1,0 +1,36 @@
+@import '../../styles/global.scss';
+
+header{
+    width: 100%; min-height: 70px;
+    background-color: $main-color; color: #deeddf;
+    display: flex; align-items: center;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.716), 0 0 25px 0 rgba(0, 0, 0, 0.19);
+
+    h1{
+        margin: 0 25px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: 0 5px 4px rgba(0, 0, 0, 0.815);
+
+        @media(max-width: 500px) { font-size: 1.25rem; margin: 0 10px;}
+    }
+
+    .sign-in-up-panel-section{
+        display: flex;
+        margin: 0 15px 0 auto;
+        font-size: 1.25rem;
+
+        @media(max-width: 500px){ margin: 0 auto; font-size: 1rem;}
+
+        div{
+            margin-right: 20px; padding: .5rem;
+            text-align: center; white-space: nowrap; font-weight: bold; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.333);
+            border-radius: 25px;
+            background-color: rgb(245, 243, 243); color: #0a4f8f;
+
+            &:hover{ cursor: pointer; transform: scale(1.05); background-color: $main-color; color: #fff; outline: 1px solid #fff;}
+
+            @media(max-width: 500px){ margin: 5px; padding: .25rem;}
+        }
+    }
+}

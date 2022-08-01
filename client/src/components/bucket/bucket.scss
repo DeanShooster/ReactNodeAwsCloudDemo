@@ -1,0 +1,89 @@
+@import '../../styles/global.scss';
+
+$background-theme: rgb(254, 248, 246);
+
+.bucket-container{
+    width: 90%;  min-height: 400px;
+    margin: 0 auto 50px auto;
+    display: flex; justify-content: space-evenly;
+
+    @media(max-width: 1250px){ flex-flow: column; min-height: none;}
+
+    h1{ margin: 0; font-size: 2rem; text-align: center; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.192);}
+
+    .news-container{
+        width: 25%; padding: 10px;
+        border-top: 4px solid $main-color; border-bottom: 4px solid $main-color;
+        border-left: 1px solid rgb(194, 194, 194); border-right: 1px solid rgb(194, 194, 194);
+        display: flex; flex-flow: column; justify-content: space-around;
+        background-color: $background-theme;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.250);
+
+        @media(max-width: 1250px){ width: 50%; margin: 0 auto 15px auto; }
+        @media(max-width: 800px) { width: 90%;}
+
+        p{
+            margin: 7px 0 0 0;
+            font-size: 1rem; font-weight: bold; line-height: 30px;
+            display: flex; flex-flow: column;
+            
+            .icon{ font-size: 4rem; text-align: center; margin-top: 30px; animation: fade-in 1.3s linear;}
+            animation: fade-in 1.3s linear;
+        }
+
+        h4{ text-align: right; }
+    }
+
+    .user-bucket-container{
+        position: relative; width: 70%; 
+        border-top: 4px solid $main-color; border-bottom: 4px solid $main-color;
+        border-left: 1px solid rgb(194, 194, 194); border-right: 1px solid rgb(194, 194, 194);
+        background-color: $background-theme;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.250);
+
+        @media(max-width: 1250px){ width: 95%; margin: 0 auto 15px auto; min-height: 200px;}
+
+        nav{
+            width: 50%; margin: auto;
+            display: flex; justify-content: space-evenly;
+
+            span{
+                font-weight: bold; font-size: 1.15rem;
+                &:hover{ cursor: pointer; color: darkorange;}
+            }
+        }
+
+        .location{ position: absolute; top: 7px; left: 7px; font-weight: bold; }
+
+        .user-stats-data-container{
+            display: flex;
+
+            .user-stats{
+                width: 25%; padding: 15px;
+                display: flex; flex-flow: column;
+
+                @media(max-width: 800px) { width: 30%;}
+                @media(max-width: 450px) { width: 40%;}
+
+                h2{ text-align: center; }
+                div{ 
+                    font-weight: bold; line-height: 1.5rem; font-size: 1.1rem; white-space: nowrap;
+                    @media(max-width: 800px) { font-size: .9rem;}
+                    @media(max-width: 450px) { font-size: .7rem;}
+                    span{ 
+                        font-size: .9rem; font-family:cursive; color: rgb(96, 65, 9); 
+                        @media(max-width: 800px) { font-size: .7rem;}
+                        @media(max-width: 450px) { font-size: .6rem;}
+                    }
+                }
+                span{ text-align: right; font-weight: bold; font-size: .8rem; margin-top: 20px; }
+            }
+        }
+    }
+}
+
+
+@keyframes fade-in{
+    0%{ color: rgba(255, 255, 255, 0); }
+    100%{ color: $main-color; }
+}

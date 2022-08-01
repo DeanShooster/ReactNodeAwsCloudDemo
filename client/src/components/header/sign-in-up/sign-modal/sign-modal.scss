@@ -1,0 +1,88 @@
+@import '../../../../styles/global.scss';
+
+.block-background{
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: rgba(4, 4, 4, 0.237);
+    z-index: 999;
+}
+
+.sign-modal{
+    position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%);
+    width: 650px; min-height: 100px; padding: 32px;
+    background-color: #fff;
+    border: 4px double $main-color;  border-radius: 15px; 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.358);
+    z-index: 1000;
+
+    @media (max-width:800px) { width: 350px; padding: 10px;}
+
+    .close-modal{
+        position: absolute; top:0; left:0; margin: 10px;
+        color: $main-color;
+        font-size: 1.75rem; font-family: 'Courier New', Courier, monospace; font-weight: bold;
+
+        &:hover{ cursor: pointer; color:darkorange; }
+    }
+
+    h2{
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 2rem;
+        color:$main-color;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.588);
+    }
+
+    form{
+        width: 100%;
+        display: flex; flex-flow: column;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        div{
+            margin: 1rem auto;
+            display: flex; align-items: center;
+            width: 70%;
+
+            @media (max-width:800px) { width: 100%; }
+        }
+
+        label{
+            display: flex; align-items: center;
+            flex: 1;
+            font-weight: bold;
+            color: #464646;
+        }
+
+        input{
+            flex: 3;
+            padding: 0.35rem 0.35rem;
+            border: 1px solid #ccc; border-radius: 7px;
+            font-size: 1.1rem;
+        }
+
+        button{
+            margin: 10px auto; width: 10rem;
+            padding: 1rem 2.5rem 1rem 2.5rem;
+            border: none; border-radius: 50px;
+            background-color: $main-color;
+            color: white; font-size: 1.3rem;
+            display: flex; justify-content: center;
+
+            &:hover{
+                cursor: pointer;
+                color: $main-color;
+                background-color: white; outline:$main-color 3px solid;
+            }
+        }
+    }
+}
+
+.error{
+    outline: 1px solid red;
+    background-color: rgb(249, 223, 223);
+}
+
+.error-msg{
+    width: 100%;
+    text-align: center;
+    color: red; font-weight: bold;
+}

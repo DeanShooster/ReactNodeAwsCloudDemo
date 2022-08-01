@@ -1,0 +1,30 @@
+@import '../../../styles/global.scss';
+
+footer{
+    min-height: 100px; width: 100%;
+    background-color: $main-color; color: white;
+    margin-top: 20px;
+
+    section{
+        width: 80%; margin: auto;
+        display: flex; justify-content: space-evenly; flex-wrap: wrap;
+
+        @media(max-width: 500px) { flex-flow: column ;}
+
+        div{ 
+            padding: 10px; 
+            @media(max-width: 500px) { text-align: center;}
+        }
+        ul{ list-style: none; padding: 0; }
+        li{ 
+            margin: 3px;
+            &:hover{ cursor: pointer; color: darkorange;}
+        }
+
+        span{
+            font-size: 8rem;
+            margin: auto 0 auto 0;
+            @media(max-width: 500px) { margin: auto;}
+        }
+    }
+}

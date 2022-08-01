@@ -1,0 +1,11 @@
+@import './styles/global.scss';
+
+body{
+    margin: 0;
+    font-family: 'Assistant', sans-serif;
+}
+
+::-webkit-scrollbar { width: 17px; }
+::-webkit-scrollbar-thumb { background: #1b242f; border-radius: 7px; }
+::-webkit-scrollbar-track { background: rgb(163, 159, 159); }
+::-webkit-scrollbar-thumb:hover { background: #171e28;}

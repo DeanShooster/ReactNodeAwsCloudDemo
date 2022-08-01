@@ -1,0 +1,51 @@
+@import '../../../../../styles/global.scss';
+
+.upload-data-container{
+    width: 70%; padding: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2); border-top:1px solid rgba(0, 0, 0, 0.2);
+
+    .instructions{
+        height: 30%;
+        margin-top: 10px;
+        p{
+            margin:0; line-height: 22px;
+            font-weight: bold; font-size: .9rem;
+            a{ color: darkorange; &:hover{ color: $main-color; } }
+
+            @media(max-width: 450px) { font-size: .7rem;}
+        }
+    }
+
+    .upload-data{
+        height: 70%;
+        display: flex; justify-content: center; align-items: center; flex-flow: column;
+
+        @media(max-width: 450px) {width: 50%;}
+
+        label{
+            display: flex; flex-flow: column;
+        }
+        
+        input{ display: none;}
+        span{
+            padding: 25px; margin-bottom: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.105); border-top: 4px solid $main-color; border-bottom: 4px solid $main-color;
+            font-size: 1.25rem; font-weight: bold;
+            background-color: rgb(250, 245, 245); box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.150);
+
+            @media(max-width: 800px) { padding: 15px; font-size: 1rem;}
+            @media(max-width: 450px) { padding: 5px; font-size: .8rem;}
+            
+            &:hover{ cursor: pointer; outline: 1px solid $main-color; }
+        }
+        button{
+            padding: 7px;
+            border-radius: 5px; border: none;
+            background-color: $main-color; color: white;
+            font-size: 1rem;
+            &:hover{ cursor: pointer; background-color: white ; color: $main-color; outline: 2px solid $main-color}
+        }
+    }
+
+    .msg{ margin: 10px 0 0 0; text-align: center; font-weight: bold; }
+}

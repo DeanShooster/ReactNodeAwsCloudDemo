@@ -1,0 +1,29 @@
+@import '../../../styles/global.scss';
+
+.console{
+    width: 90%;
+    margin: 40px auto 25px auto; padding: 20px;
+    border-top: 2px solid $main-color;
+
+    display: flex; justify-content: center; flex-wrap: wrap;
+
+    @media(max-width: 700px){ padding: 20px 0 0 0 ; }
+
+    div{
+        padding: 25px; min-width: 80px; margin: 25px 10px 10px 10px;
+        display: flex; flex-flow: column; justify-content: center; align-items: center; 
+        border-top: 3px solid $main-color; border-bottom: 3px solid $main-color;
+        border-left: 1px solid rgb(194, 194, 194); border-right: 1px solid rgb(194, 194, 194);
+
+        background-color: rgb(250, 247, 247);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.150);
+        
+        @media(max-width: 700px){ min-width: 120px; }
+        @media(max-width: 450px){ width: 60%; }
+
+        span{ font-size: 2.75rem;}
+        p{ margin: 0; font-size: 1.1rem; font-weight: bold;}
+
+        &:hover{ cursor: pointer; outline: 1px solid $main-color; }
+    }
+}

@@ -1,0 +1,60 @@
+import { useContext, useReducer, useState } from "react";
+import { userContext } from "../../../../../context/UserContext";
+
+import { SignInUpReducer } from "../../../../../reducer/SignInUpReducer";
+import { UserSignUp } from "../../../../../api/UserApiRequests";
+
+const SignUp = ( props: { closeModal : Function } ) => {
+
+    const userInfo = useContext(userContext);
+    const [formState,dispatchSignForm] = useReducer(SignInUpReducer,{
+        values: { email: null, password: null, repeatedPassword: null },
+        isFormValid: false
+    });
+    const [errorMsg,setErrorMsg] = useState<string | null>(null);
+
+    const onSignUpHandler = async ( event:any ) =>{
+        event.preventDefault();
+        if( !formState.isFormValid ) return;
+        if( event.target[1].value !== event.target[2].value){ setErrorMsg('Passwords do not match.'); return; }
+        const credentials = { email: event.target[0].value, password: event.target[1].value};
+        const data = await UserSignUp( credentials );
+        if( data.token ){ // If for successfully creating a user.
+            sessionStorage.setItem('token',data.token);
+            userInfo!.updateUser( {email: credentials.email, name: 'User'}); // User Context
+            event.target.reset(); props.closeModal();
+            return;
+        }
+        setErrorMsg( data.Message );
+    }
+
+    return (
+        <form onSubmit={onSignUpHandler}>
+            <div>
+                <label>E-Mail</label>
+                <input type='email' autoComplete='new-password' 
+                    className={ formState.values.email || formState.values.email===null ? '' : 'error' }
+                    onBlur={ (event) => { dispatchSignForm( { type: 'EMAIL', payload: event.target.value } ) } } />
+            </div>
+            { !(formState.values.email || formState.values.email===null) ? <span className="error-msg">Invalid Input Email.</span> : null }
+            <div>
+                <label>Password</label>
+                <input type='password' autoComplete='new-password' 
+                    className={formState.values.password || formState.values.password===null ? '' : 'error'}
+                    onBlur={ (event) => { dispatchSignForm( { type: 'PASSWORD', payload: event.target.value } ) } } />
+            </div>
+            { !(formState.values.password || formState.values.password===null) ? <span className="error-msg">Password is too Short.</span> : null }
+            <div>
+                <label>Repeat</label>
+                <input type='password' autoComplete='new-password' 
+                    className={formState.values.repeatedPassword || formState.values.repeatedPassword===null ? '' : 'error'}
+                    onBlur={ (event) => { dispatchSignForm( { type: 'REPEATED_PASSWORD', payload: event.target.value } ) } } />
+            </div>
+            { !(formState.values.repeatedPassword || formState.values.repeatedPassword===null) ? <span className="error-msg">Password is too Short.</span> : null }
+            <button>Sign Up</button>
+            { errorMsg && <span className="error-msg">{errorMsg}</span>}
+        </form>
+    );
+};
+
+export default SignUp;
