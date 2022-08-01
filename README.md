@@ -35,5 +35,13 @@ The application mimics a cloud service web application such as Aamazon services 
 
 <h2 align="center">Demo Videos</h2>
 
+<b>Home Page</b>
+
+https://user-images.githubusercontent.com/92792238/182134702-eaa099b7-8b4b-4338-a5b6-45cb7d6caca9.mp4
+
+<b>Bucket Page</b>
+
+https://user-images.githubusercontent.com/92792238/182134789-d15d3d29-834a-4804-8026-99b37dc14e7b.mp4
+
 
 
