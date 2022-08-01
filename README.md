@@ -11,8 +11,9 @@
 <h2 align="center">About The Application </h2>
 This API is a basic example of a front & end web application.
 
-It is build with React library and Typescript.
+It is build with MERN.
 Additionally the application relies on Atlas and Amazon cloud storage for the users data manipulation and usage.
+The application mimics a cloud service web application such as Aamazon services and offers the most basic storage bucket functionallity.
 
 - Anyone can sign up and manipuate the data ( Upload/Download any files and clear the user storage bucket ).
 
