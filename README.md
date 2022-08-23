@@ -1,47 +1,35 @@
 <div></div>
-<h1  align="center">MERN AWS User Cloud Demo Application</h1>
+<h1  align="center">React NodeJS SQL Supermarket Storage Demo Application</h1>
 
 <div align="center">
   <p align="center">
-    a basic front & back ends for users data storage cloud with Amazon and Mongo interfaces.
+    a basic front & back ends for supermarket managers interface with React , Nodejs and SQL database.
   </p>
 </div>
 <hr>
 <!-- ABOUT THE APPLICATION -->
 <h2 align="center">About The Application </h2>
-This API is a basic example of a front & end web application.
+This API is a basic example of a front & end web application using Legacy React class component code and NodeJS SQL configuration.
 
-It is build with MERN.
-Additionally the application relies on Atlas and Amazon cloud storage for the users data manipulation and usage.
-The application mimics a cloud service web application such as Aamazon services and offers the most basic storage bucket functionallity.
+Additionally the application relies on SQL Database for the managers data management.
+The application mimics a basic management storage interface.
 
-- Anyone can sign up and manipuate the data ( Upload/Download any files and clear the user storage bucket ).
+- Only admins ( Managers ) can log in and access to the storage web page after authentication.
+- Admins can view the data and manipulate storage sorting.
 
 <hr>
 <h2 align="center">Build With</h2>
 
 -   [React](https://reactjs.org/)
--   [TypeScript](https://www.typescriptlang.org)
+-   [React Class Components](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/)
 -   [NodeJS](https://nodejs.org/en/)
 -   [Express](https://expressjs.com/)
 -   [SASS](https://sass-lang.com/)
 -   [JavaScript](https://www.javascript.com/)
--   [Multer](https://github.com/expressjs/multer#readme)
--   [MulterS3](https://github.com/anacronw/multer-s3#readme)
--   [AWS](https://aws.amazon.com/)
--   [MongoDB](https://www.mongodb.com/)
+-   [MSSQL](https://www.npmjs.com/package/mssql)
 
 <hr>
 
 <h2 align="center">Demo Videos</h2>
 
-<b>Home Page</b>
-
-https://user-images.githubusercontent.com/92792238/182134702-eaa099b7-8b4b-4338-a5b6-45cb7d6caca9.mp4
-
-<b>Bucket Page</b>
-
-https://user-images.githubusercontent.com/92792238/182134789-d15d3d29-834a-4804-8026-99b37dc14e7b.mp4
-
-
-
+https://user-images.githubusercontent.com/92792238/186162626-f8b50b0e-018e-4411-b6dd-ca83f71eb46c.mp4
