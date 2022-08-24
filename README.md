@@ -1,35 +1,42 @@
 <div></div>
-<h1  align="center">React NodeJS SQL Supermarket Storage Demo Application</h1>
+<h1  align="center">MERN AWS Cloud User Management Application</h1>
 
 <div align="center">
   <p align="center">
-    a basic front & back ends for supermarket managers interface with React , Nodejs and SQL database.
+    a basic front & back ends for user data management via AWS Cloud and MongoDB.
   </p>
 </div>
 <hr>
 <!-- ABOUT THE APPLICATION -->
 <h2 align="center">About The Application </h2>
-This API is a basic example of a front & end web application using Legacy React class component code and NodeJS SQL configuration.
+This API is a basic example of a front & end web application for cloud management.
 
-Additionally the application relies on SQL Database for the managers data management.
-The application mimics a basic management storage interface.
+Additionally the application relies on MongoDB Atlas Database for users and AWS links and AWS S3 Cloud.
+The application mimics a basic cloud management storage interface.
 
-- Only admins ( Managers ) can log in and access to the storage web page after authentication.
-- Admins can view the data and manipulate storage sorting.
+- Public application. Users can sign up or log in.
+- Users can view the cloud storage and upload files to the storage.
 
 <hr>
 <h2 align="center">Build With</h2>
 
 -   [React](https://reactjs.org/)
--   [React Class Components](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/)
 -   [NodeJS](https://nodejs.org/en/)
 -   [Express](https://expressjs.com/)
 -   [SASS](https://sass-lang.com/)
--   [JavaScript](https://www.javascript.com/)
--   [MSSQL](https://www.npmjs.com/package/mssql)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [MongoDB](https://www.mongodb.com/)
+-   [AWS](https://aws.amazon.com/)
+-   [MulterS3](https://www.npmjs.com/package/multer-s3)
 
 <hr>
 
 <h2 align="center">Demo Videos</h2>
 
-https://user-images.githubusercontent.com/92792238/186162626-f8b50b0e-018e-4411-b6dd-ca83f71eb46c.mp4
+<bold>Home Page</bold>
+
+https://user-images.githubusercontent.com/92792238/186415558-824340dc-8aca-4f62-9cc7-9d8bbe9900a2.mp4
+
+<bold>Bucket Page</bold>
+
+https://user-images.githubusercontent.com/92792238/186415686-4424198a-4e95-4f1c-a788-d7fd56b44ca6.mp4
